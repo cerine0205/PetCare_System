@@ -44,6 +44,13 @@ namespace programming3_PetCare_System
                 int age = (int)numAge.Value;
                 string notes = txtNotes.Text;
 
+                if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(type) || age <=0)
+                {
+                    MessageBox.Show("Please make sure to fill in all fields correctly.");
+                    return;
+                }
+
+
                 if (type == "Dog")
                 {
                     manager.AddPet(new Dog(name, age, notes));
@@ -70,6 +77,67 @@ namespace programming3_PetCare_System
             cmbType.SelectedItem = -1;
             numAge.Value = 0;
             txtNotes.Clear();
+        }
+        private void btnShowAddPetPanle_Click(object sender, EventArgs e)
+        {
+            panelAdd.Visible = true;
+            btnDone.Visible = true;
+            btnBack.Visible = true;
+
+        }
+
+        private void btnAddPet_Click(object sender, EventArgs e)
+        {
+            panelDelete.Visible = false;
+            panelEdit.Visible = false;
+            panelSearch.Visible = false;
+
+            panelAdd.Visible = true;
+        }
+
+        private void btnDeletePet_Click(object sender, EventArgs e)
+        {
+            panelAdd.Visible = false;
+            panelEdit.Visible = false;
+            panelSearch.Visible = false;
+
+            panelDelete.Visible = true;
+        }
+
+        private void btnEditPet_Click(object sender, EventArgs e)
+        {
+            panelDelete.Visible = false;
+            panelAdd.Visible = false;
+            panelSearch.Visible = false;
+
+            panelEdit.Visible = true;
+        }
+
+        private void btnSearchPet_Click(object sender, EventArgs e)
+        {
+            panelDelete.Visible = false;
+            panelEdit.Visible = false;
+            panelAdd.Visible = false;
+
+            panelSearch.Visible = true;
+        }
+
+        private void btnInteractWithPet_Click(object sender, EventArgs e)
+        {
+            panelAdd.Visible = false;
+            panelDelete.Visible = false;
+            panelEdit.Visible = false;
+            panelSearch.Visible = false;
+
+            panelInteract.Visible = true;
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            panelAdd.Visible = false;
+            btnDone.Visible = false;
+            btnBack.Visible = false;
+            panelMain.Visible = true;
         }
     }
 
