@@ -33,9 +33,12 @@ namespace programming3_PetCare_System
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            {
+
                 string name = txtName.Text;
                 string type = cmbType.SelectedItem.ToString();
                 int age = (int)numAge.Value;
@@ -43,15 +46,15 @@ namespace programming3_PetCare_System
 
                 if (type == "Dog")
                 {
-                   manager.AddPet(new Dog(name, age, notes));
+                    manager.AddPet(new Dog(name, age, notes));
                 }
-                else if(type == "Cat")
+                else if (type == "Cat")
                 {
-                   manager.AddPet(new Cat(name, age,notes));
+                    manager.AddPet(new Cat(name, age, notes));
                 }
                 else if (type == "bird")
                 {
-                   manager.AddPet(new Bird(name, age,notes));
+                    manager.AddPet(new Bird(name, age, notes));
                 }
 
                 MessageBox.Show("Add Pet : " + name + " " + type + " " + age + "years " + " Notes :" + notes);
@@ -60,6 +63,7 @@ namespace programming3_PetCare_System
 
 
             }
+        }
         private void ClearFields()
         {
             txtName.Clear();
@@ -68,5 +72,6 @@ namespace programming3_PetCare_System
             txtNotes.Clear();
         }
     }
+
     
 }
