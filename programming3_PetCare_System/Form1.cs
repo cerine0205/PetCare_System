@@ -12,6 +12,7 @@ namespace programming3_PetCare_System
 {
     public partial class Form1 : Form
     {
+        private PetManager manager = new PetManager();
         public Form1()
         {
             InitializeComponent();
@@ -32,9 +33,42 @@ namespace programming3_PetCare_System
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
+            
+                string name = txtName.Text;
+                string type = cmbType.SelectedItem.ToString();
+                int age = (int)numAge.Value;
+                string breed = txtBreed.Text;
+                string notes = txtNotes.Text;
 
+                if (type == "Dog")
+                {
+                manager.AddPet(new Dog(name, age, breed, notes));
+                }
+                else if(type == "Cat")
+                {
+                manager.AddPet(new Cat(name, age, breed, notes));
+                }
+                else if (type == "bird")
+                {
+                manager.AddPet(new Bird(name, age, breed, notes));
+                }
+
+                MessageBox.Show("Add Pet : " + name + type + age + "years " + " Notes :" + notes);
+
+                ClearFields();
+
+
+            }
+        private void ClearFields()
+        {
+            txtName.Clear();
+            cmbType.SelectedItem = -1;
+            numAge.Value = 0;
+            txtBreed.Clear();
+            txtNotes.Clear();
         }
     }
+    
 }
