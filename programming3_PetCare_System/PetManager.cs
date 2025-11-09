@@ -56,7 +56,7 @@ namespace programming3_PetCare_System
     {
         // Constructor calling base constructor and initializing breed
 
-        public Dog(string name, int age)
+        public Dog(string name, int age, string notes)
             : base(name, age, PetType.Dog)
         {
         }
@@ -84,7 +84,7 @@ namespace programming3_PetCare_System
     public class Cat : Pet
     {
         // Constructor calling base and initializing IsIndoor property
-        public Cat(string name, int age)
+        public Cat(string name, int age, string notes)
             : base(name, age, PetType.Cat)
         {
         }
@@ -113,7 +113,7 @@ namespace programming3_PetCare_System
         // Additional property specific to birds
 
         // Constructor calling base constructor and initializing bType
-        public Bird(string name, int age)
+        public Bird(string name, int age,string notes)
             : base(name, age, PetType.Bird)
         {
         }
