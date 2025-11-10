@@ -16,6 +16,10 @@ namespace programming3_PetCare_System
         public Form1()
         {
             InitializeComponent();
+            manager.AddPet(new Dog("Buddy", 3,""));
+            manager.AddPet(new Cat("Mittens", 2, ""));
+            manager.AddPet(new Dog("Max", 5, ""));
+            manager.AddPet(new Cat("Luna", 1, ""));
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -90,7 +94,7 @@ namespace programming3_PetCare_System
         {
             panelDelete.Visible = false;
             panelEdit.Visible = false;
-            panelSearch.Visible = false;
+           // panelSearch.Visible = false;
 
             panelAdd.Visible = true;
         }
@@ -99,7 +103,7 @@ namespace programming3_PetCare_System
         {
             panelAdd.Visible = false;
             panelEdit.Visible = false;
-            panelSearch.Visible = false;
+           // panelSearch.Visible = false;
 
             panelDelete.Visible = true;
         }
@@ -108,7 +112,7 @@ namespace programming3_PetCare_System
         {
             panelDelete.Visible = false;
             panelAdd.Visible = false;
-            panelSearch.Visible = false;
+           // panelSearch.Visible = false;
 
             panelEdit.Visible = true;
         }
@@ -119,7 +123,7 @@ namespace programming3_PetCare_System
             panelEdit.Visible = false;
             panelAdd.Visible = false;
 
-            panelSearch.Visible = true;
+           // panelSearch.Visible = true;
         }
 
         private void btnInteractWithPet_Click(object sender, EventArgs e)
@@ -127,9 +131,9 @@ namespace programming3_PetCare_System
             panelAdd.Visible = false;
             panelDelete.Visible = false;
             panelEdit.Visible = false;
-            panelSearch.Visible = false;
+          //  panelSearch.Visible = false;
 
-            panelInteract.Visible = true;
+           // panelInteract.Visible = true;
         }
 
         private void btnDone_Click(object sender, EventArgs e)
@@ -139,6 +143,129 @@ namespace programming3_PetCare_System
             btnBack.Visible = false;
             panelMain.Visible = true;
         }
+
+
+        //cerine code
+        private void btnShowDeletePetPanle_Click(object sender, EventArgs e)
+        {
+            panelDelete.Visible = true;
+            panelEdit.Visible = false;
+            panelAdd.Visible = false;
+            //panelSearch.Visible = false;
+            //panelInteract.Visible = false;
+
+        }
+
+        private void btnShowEditPetPanle_Click(object sender, EventArgs e)
+        {
+            panelEdit.Visible = true;
+            panelDelete.Visible = false;
+            panelAdd.Visible = false;
+            //panelSearch.Visible = false;
+            //panelInteract.Visible = false;
+
+        }
+
+        private void DeletePetbtn_Click(object sender, EventArgs e)
+        {
+            Delete_PetNotFound_lbl.Visible = false;
+            string name = txtboxName.Text;
+            var isDeleted = manager.DeletePet(name);
+
+            if (isDeleted)
+            {
+               MessageBox.Show("pet has been deleted successfully");
+            }
+
+            else
+            {
+               Delete_PetNotFound_lbl.Visible = true;
+            }
+        }
+
+        private void editPetbtn_Click(object sender, EventArgs e)
+        {
+            edit_petNotFoundLbl.Visible = false;
+            invalidAgeLbl.Visible = false;
+            invalidNameLbl.Visible = false; 
+
+            string oldname = txtBoxOldName.Text.Trim();
+            Pet oldPet = manager.SearchPet(oldname);
+            Pet newPet = null;
+
+            if (oldPet != null) // there is a pet with this name
+            {
+                string newName = txtBoxNewName.Text.Trim();
+                string newAgeStr = txtBoxNewAge.Text.Trim();
+
+                //name
+                if (newName == "" || newName == null)
+                {
+                    invalidNameLbl.Text = "Invalid Name!";
+                    invalidNameLbl.Visible = true;
+                }
+
+                else if (manager.SearchPet(newName) != null)
+                {
+                    invalidNameLbl.Text = "The name already exists.";
+                    invalidNameLbl.Visible = true;
+                }
+
+
+                // age
+                if (!(int.TryParse(newAgeStr, out int newAge)) || newAge <= 0)
+                {
+                    invalidAgeLbl.Visible = true;
+                }
+
+                if (manager.SearchPet(newName) == null && newName != "" && newAge > 0)
+                {
+                    // creat new Pet
+                    if (oldPet.Type == PetType.Dog)
+                    {
+                        newPet = new Dog(newName, newAge,"");
+
+                    }
+                    else if (oldPet.Type == PetType.Cat)
+                    {
+                        newPet = new Cat(newName, newAge,"");
+
+                    }
+                    else if (oldPet.Type == PetType.Bird)
+                    {
+                        newPet = new Bird(newName, newAge,"");
+
+                    }
+
+                    // apply changes
+                    if (newPet != null)
+                    {
+                        manager.EditPet(oldname, newPet);
+                        MessageBox.Show("Pet updated successfully");
+
+                    }
+                }
+
+
+            }
+
+            else // oldPet == null
+            {
+                edit_petNotFoundLbl.Visible = true;
+
+            }
+
+        }
+
+        private void btn_showAddPanel_Test_btn_Click(object sender, EventArgs e)
+        {
+            panelEdit.Visible = false;
+            panelDelete.Visible = false;
+            panelAdd.Visible = true;
+           //panelSearch.Visible = false;
+           //panelInteract.Visible = false;
+        }
+        // end cerine code
     }
 
     
