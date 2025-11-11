@@ -16,7 +16,7 @@ namespace programming3_PetCare_System
         public Form1()
         {
             InitializeComponent();
-            manager.AddPet(new Dog("Buddy", 3,""));
+            manager.AddPet(new Dog("Buddy", 3, ""));
             manager.AddPet(new Cat("Mittens", 2, ""));
             manager.AddPet(new Dog("Max", 5, ""));
             manager.AddPet(new Cat("Luna", 1, ""));
@@ -40,7 +40,7 @@ namespace programming3_PetCare_System
             MainMenu_panel.Visible = false;
             panelEdit.Visible = false;
             panelDelete.Visible = false;
-            //panelSearch.Visible = false;
+            panelSearch.Visible = false;
             //panelInteract.Visible = false;
         }
 
@@ -52,7 +52,7 @@ namespace programming3_PetCare_System
             panelEdit.Visible = false;
             panelDelete.Visible = false;
             panelAdd.Visible = false;
-            //panelSearch.Visible = false;
+            panelSearch.Visible = false;
             //panelInteract.Visible = false;
         }
 
@@ -65,7 +65,7 @@ namespace programming3_PetCare_System
                 int age = (int)numAge.Value;
                 string notes = txtNotes.Text;
 
-                if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(type) || age <=0)
+                if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(type) || age <= 0)
                 {
                     MessageBox.Show("Please make sure to fill in all fields correctly.");
                     return;
@@ -111,7 +111,7 @@ namespace programming3_PetCare_System
         {
             panelDelete.Visible = false;
             panelEdit.Visible = false;
-           // panelSearch.Visible = false;
+            panelSearch.Visible = false;
 
             panelAdd.Visible = true;
         }
@@ -120,7 +120,7 @@ namespace programming3_PetCare_System
         {
             panelAdd.Visible = false;
             panelEdit.Visible = false;
-           // panelSearch.Visible = false;
+            panelSearch.Visible = false;
 
             panelDelete.Visible = true;
         }
@@ -129,7 +129,7 @@ namespace programming3_PetCare_System
         {
             panelDelete.Visible = false;
             panelAdd.Visible = false;
-           // panelSearch.Visible = false;
+            panelSearch.Visible = false;
 
             panelEdit.Visible = true;
         }
@@ -140,7 +140,7 @@ namespace programming3_PetCare_System
             panelEdit.Visible = false;
             panelAdd.Visible = false;
 
-           // panelSearch.Visible = true;
+            panelSearch.Visible = true;
         }
 
         private void btnInteractWithPet_Click(object sender, EventArgs e)
@@ -148,9 +148,9 @@ namespace programming3_PetCare_System
             panelAdd.Visible = false;
             panelDelete.Visible = false;
             panelEdit.Visible = false;
-          //  panelSearch.Visible = false;
+            panelSearch.Visible = false;
 
-           // panelInteract.Visible = true;
+            // panelInteract.Visible = true;
         }
 
         private void btnDone_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace programming3_PetCare_System
             MainMenu_panel.Visible = false;
             panelEdit.Visible = false;
             panelAdd.Visible = false;
-            //panelSearch.Visible = false;
+            panelSearch.Visible = false;
             //panelInteract.Visible = false;
 
         }
@@ -182,7 +182,7 @@ namespace programming3_PetCare_System
             MainMenu_panel.Visible = false;
             panelDelete.Visible = false;
             panelAdd.Visible = false;
-            //panelSearch.Visible = false;
+            panelSearch.Visible = false;
             //panelInteract.Visible = false;
 
         }
@@ -195,12 +195,12 @@ namespace programming3_PetCare_System
 
             if (isDeleted)
             {
-               MessageBox.Show("pet has been deleted successfully");
+                MessageBox.Show("pet has been deleted successfully");
             }
 
             else
             {
-               Delete_PetNotFound_lbl.Visible = true;
+                Delete_PetNotFound_lbl.Visible = true;
             }
         }
 
@@ -208,7 +208,7 @@ namespace programming3_PetCare_System
         {
             edit_petNotFoundLbl.Visible = false;
             invalidAgeLbl.Visible = false;
-            invalidNameLbl.Visible = false; 
+            invalidNameLbl.Visible = false;
 
             string oldname = txtBoxOldName.Text.Trim();
             Pet oldPet = manager.SearchPet(oldname);
@@ -244,17 +244,17 @@ namespace programming3_PetCare_System
                     // creat new Pet
                     if (oldPet.Type == PetType.Dog)
                     {
-                        newPet = new Dog(newName, newAge,"");
+                        newPet = new Dog(newName, newAge, "");
 
                     }
                     else if (oldPet.Type == PetType.Cat)
                     {
-                        newPet = new Cat(newName, newAge,"");
+                        newPet = new Cat(newName, newAge, "");
 
                     }
                     else if (oldPet.Type == PetType.Bird)
                     {
-                        newPet = new Bird(newName, newAge,"");
+                        newPet = new Bird(newName, newAge, "");
 
                     }
 
@@ -289,7 +289,7 @@ namespace programming3_PetCare_System
             panelEdit.Visible = false;
             panelDelete.Visible = false;
             panelAdd.Visible = false;
-            //panelSearch.Visible = false;
+            panelSearch.Visible = false;
             //panelInteract.Visible = false;
         }
 
@@ -300,7 +300,7 @@ namespace programming3_PetCare_System
             panelEdit.Visible = false;
             panelDelete.Visible = false;
             panelAdd.Visible = false;
-            //panelSearch.Visible = false;
+            panelSearch.Visible = false;
             //panelInteract.Visible = false;
 
         }
@@ -309,7 +309,7 @@ namespace programming3_PetCare_System
 
 
 
-   
+
 
 
 
@@ -319,7 +319,7 @@ namespace programming3_PetCare_System
         // هنا اضفت ذا لكود هاجر عشان يبين البانلز
         private void btnShowSearchPetPanle_Click(object sender, EventArgs e)
         {
-            //panelSearch.Visible = true;
+            panelSearch.Visible = true;
 
             MainMenu_panel.Visible = false;
             panelEdit.Visible = false;
@@ -331,19 +331,19 @@ namespace programming3_PetCare_System
         private void btnShowInteractPetPanle_Click(object sender, EventArgs e)
         {
 
-           //panelInteract.Visible = true;
+            //panelInteract.Visible = true;
 
             MainMenu_panel.Visible = false;
             panelEdit.Visible = false;
             panelDelete.Visible = false;
             panelAdd.Visible = false;
-            //panelSearch.Visible = false;
+            panelSearch.Visible = false;
         }
 
 
 
 
-       
+
 
 
 
@@ -358,12 +358,35 @@ namespace programming3_PetCare_System
 
         }
 
-       
+        private void txtPetName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            String name = txtPetName.Text;
+            var pet = manager.SearchPet(name);
+            if (pet != null)
+            {
+                MessageBox.Show("Pet Found: " + pet.DisplayInfo());
+            }
+            else
+            {
+                MessageBox.Show("Pet Not Found");
+            }
+        }
+
+        private void btnBackToMain_Click(object sender, EventArgs e)
+        {
+            MainMenu_panel.Visible = true;
+
+            panelEdit.Visible = false;
+            panelDelete.Visible = false;
+            panelAdd.Visible = false;
+            panelSearch.Visible = false;
+            //panelInteract.Visible = false;
+        }
     }
-
-
-
-
-
-
 }
+    

@@ -57,6 +57,7 @@
             this.btnShowDeletePetPanle = new System.Windows.Forms.Button();
             this.btnShowEditPetPanle = new System.Windows.Forms.Button();
             this.panelEdit = new System.Windows.Forms.Panel();
+            this.backToMenuFromEdit_btn = new System.Windows.Forms.Button();
             this.edit_petNotFoundLbl = new System.Windows.Forms.Label();
             this.invalidAgeLbl = new System.Windows.Forms.Label();
             this.invalidNameLbl = new System.Windows.Forms.Label();
@@ -69,6 +70,7 @@
             this.txtBoxOldName = new System.Windows.Forms.TextBox();
             this.lblAskForOldName = new System.Windows.Forms.Label();
             this.panelDelete = new System.Windows.Forms.Panel();
+            this.backToMenuFromdelete_btn = new System.Windows.Forms.Button();
             this.Delete_PetNotFound_lbl = new System.Windows.Forms.Label();
             this.txtboxName = new System.Windows.Forms.TextBox();
             this.lblAskForNameToDelete = new System.Windows.Forms.Label();
@@ -80,8 +82,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.backToMenuFromEdit_btn = new System.Windows.Forms.Button();
-            this.backToMenuFromdelete_btn = new System.Windows.Forms.Button();
+            this.panelSearch = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPetName = new System.Windows.Forms.TextBox();
+            this.SearchResult = new System.Windows.Forms.TextBox();
+            this.btnBackToMain = new System.Windows.Forms.Button();
             this.panelAdd.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -92,6 +100,8 @@
             this.panelDelete.SuspendLayout();
             this.MainMenu_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAdd
@@ -103,18 +113,20 @@
             this.panelAdd.Controls.Add(this.btnDone);
             this.panelAdd.Controls.Add(this.labelAddPet);
             this.panelAdd.Controls.Add(this.tableLayoutPanel1);
-            this.panelAdd.Location = new System.Drawing.Point(120, 27);
+            this.panelAdd.Location = new System.Drawing.Point(144, 32);
+            this.panelAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAdd.Name = "panelAdd";
-            this.panelAdd.Size = new System.Drawing.Size(601, 459);
+            this.panelAdd.Size = new System.Drawing.Size(721, 551);
             this.panelAdd.TabIndex = 0;
             this.panelAdd.Visible = false;
             // 
             // backToMenuFromAdd_btn
             // 
             this.backToMenuFromAdd_btn.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToMenuFromAdd_btn.Location = new System.Drawing.Point(334, 355);
+            this.backToMenuFromAdd_btn.Location = new System.Drawing.Point(401, 426);
+            this.backToMenuFromAdd_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backToMenuFromAdd_btn.Name = "backToMenuFromAdd_btn";
-            this.backToMenuFromAdd_btn.Size = new System.Drawing.Size(102, 38);
+            this.backToMenuFromAdd_btn.Size = new System.Drawing.Size(122, 46);
             this.backToMenuFromAdd_btn.TabIndex = 5;
             this.backToMenuFromAdd_btn.Text = "Back";
             this.backToMenuFromAdd_btn.UseVisualStyleBackColor = true;
@@ -130,18 +142,20 @@
             this.panelMain.Controls.Add(this.btnEditPet);
             this.panelMain.Controls.Add(this.btnDeletePet);
             this.panelMain.Controls.Add(this.btnAddPet);
-            this.panelMain.Location = new System.Drawing.Point(607, 4);
+            this.panelMain.Location = new System.Drawing.Point(728, 5);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(11, 479);
+            this.panelMain.Size = new System.Drawing.Size(13, 575);
             this.panelMain.TabIndex = 3;
             // 
             // lblInstruction2
             // 
             this.lblInstruction2.AutoSize = true;
             this.lblInstruction2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstruction2.Location = new System.Drawing.Point(242, 29);
+            this.lblInstruction2.Location = new System.Drawing.Point(290, 35);
+            this.lblInstruction2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstruction2.Name = "lblInstruction2";
-            this.lblInstruction2.Size = new System.Drawing.Size(137, 26);
+            this.lblInstruction2.Size = new System.Drawing.Size(170, 33);
             this.lblInstruction2.TabIndex = 6;
             this.lblInstruction2.Text = "WELCOME !";
             // 
@@ -149,9 +163,10 @@
             // 
             this.lblInstruction.AutoSize = true;
             this.lblInstruction.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstruction.Location = new System.Drawing.Point(89, 73);
+            this.lblInstruction.Location = new System.Drawing.Point(107, 88);
+            this.lblInstruction.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstruction.Name = "lblInstruction";
-            this.lblInstruction.Size = new System.Drawing.Size(432, 26);
+            this.lblInstruction.Size = new System.Drawing.Size(517, 33);
             this.lblInstruction.TabIndex = 5;
             this.lblInstruction.Text = "Please select an action from the option below";
             // 
@@ -160,9 +175,10 @@
             this.btnInteractWithPet.BackColor = System.Drawing.Color.Lavender;
             this.btnInteractWithPet.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInteractWithPet.ForeColor = System.Drawing.Color.Navy;
-            this.btnInteractWithPet.Location = new System.Drawing.Point(214, 365);
+            this.btnInteractWithPet.Location = new System.Drawing.Point(257, 438);
+            this.btnInteractWithPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInteractWithPet.Name = "btnInteractWithPet";
-            this.btnInteractWithPet.Size = new System.Drawing.Size(207, 67);
+            this.btnInteractWithPet.Size = new System.Drawing.Size(248, 80);
             this.btnInteractWithPet.TabIndex = 4;
             this.btnInteractWithPet.Text = "Interact";
             this.btnInteractWithPet.UseVisualStyleBackColor = false;
@@ -173,9 +189,10 @@
             this.btnSearchPet.BackColor = System.Drawing.Color.Lavender;
             this.btnSearchPet.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchPet.ForeColor = System.Drawing.Color.Navy;
-            this.btnSearchPet.Location = new System.Drawing.Point(361, 268);
+            this.btnSearchPet.Location = new System.Drawing.Point(433, 322);
+            this.btnSearchPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearchPet.Name = "btnSearchPet";
-            this.btnSearchPet.Size = new System.Drawing.Size(207, 67);
+            this.btnSearchPet.Size = new System.Drawing.Size(248, 80);
             this.btnSearchPet.TabIndex = 3;
             this.btnSearchPet.Text = "Search Pet";
             this.btnSearchPet.UseVisualStyleBackColor = false;
@@ -186,9 +203,10 @@
             this.btnEditPet.BackColor = System.Drawing.Color.Lavender;
             this.btnEditPet.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditPet.ForeColor = System.Drawing.Color.Navy;
-            this.btnEditPet.Location = new System.Drawing.Point(68, 271);
+            this.btnEditPet.Location = new System.Drawing.Point(82, 325);
+            this.btnEditPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditPet.Name = "btnEditPet";
-            this.btnEditPet.Size = new System.Drawing.Size(207, 67);
+            this.btnEditPet.Size = new System.Drawing.Size(248, 80);
             this.btnEditPet.TabIndex = 2;
             this.btnEditPet.Text = "Edit Pet";
             this.btnEditPet.UseVisualStyleBackColor = false;
@@ -199,9 +217,10 @@
             this.btnDeletePet.BackColor = System.Drawing.Color.Lavender;
             this.btnDeletePet.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePet.ForeColor = System.Drawing.Color.Navy;
-            this.btnDeletePet.Location = new System.Drawing.Point(361, 167);
+            this.btnDeletePet.Location = new System.Drawing.Point(433, 200);
+            this.btnDeletePet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeletePet.Name = "btnDeletePet";
-            this.btnDeletePet.Size = new System.Drawing.Size(207, 66);
+            this.btnDeletePet.Size = new System.Drawing.Size(248, 79);
             this.btnDeletePet.TabIndex = 1;
             this.btnDeletePet.Text = "Delete Pet";
             this.btnDeletePet.UseVisualStyleBackColor = false;
@@ -212,9 +231,10 @@
             this.btnAddPet.BackColor = System.Drawing.Color.Lavender;
             this.btnAddPet.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPet.ForeColor = System.Drawing.Color.Navy;
-            this.btnAddPet.Location = new System.Drawing.Point(68, 167);
+            this.btnAddPet.Location = new System.Drawing.Point(82, 200);
+            this.btnAddPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddPet.Name = "btnAddPet";
-            this.btnAddPet.Size = new System.Drawing.Size(206, 67);
+            this.btnAddPet.Size = new System.Drawing.Size(247, 80);
             this.btnAddPet.TabIndex = 0;
             this.btnAddPet.Text = "Add Pet";
             this.btnAddPet.UseVisualStyleBackColor = false;
@@ -223,9 +243,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(164, 272);
+            this.panel1.Location = new System.Drawing.Point(197, 326);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(298, 57);
+            this.panel1.Size = new System.Drawing.Size(358, 68);
             this.panel1.TabIndex = 2;
             // 
             // flowLayoutPanel1
@@ -235,17 +256,19 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(298, 57);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(358, 68);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.LightGray;
             this.btnClear.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(153, 3);
+            this.btnClear.Location = new System.Drawing.Point(184, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(142, 45);
+            this.btnClear.Size = new System.Drawing.Size(170, 54);
             this.btnClear.TabIndex = 0;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -254,9 +277,10 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LightGray;
             this.btnAdd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(15, 3);
+            this.btnAdd.Location = new System.Drawing.Point(18, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(132, 45);
+            this.btnAdd.Size = new System.Drawing.Size(158, 54);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -265,9 +289,10 @@
             // btnDone
             // 
             this.btnDone.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDone.Location = new System.Drawing.Point(188, 355);
+            this.btnDone.Location = new System.Drawing.Point(226, 426);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(102, 38);
+            this.btnDone.Size = new System.Drawing.Size(122, 46);
             this.btnDone.TabIndex = 4;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
@@ -278,16 +303,17 @@
             this.labelAddPet.AutoSize = true;
             this.labelAddPet.BackColor = System.Drawing.Color.LavenderBlush;
             this.labelAddPet.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddPet.Location = new System.Drawing.Point(245, 60);
+            this.labelAddPet.Location = new System.Drawing.Point(294, 72);
+            this.labelAddPet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAddPet.Name = "labelAddPet";
-            this.labelAddPet.Size = new System.Drawing.Size(136, 26);
+            this.labelAddPet.Size = new System.Drawing.Size(163, 33);
             this.labelAddPet.TabIndex = 1;
             this.labelAddPet.Text = "Add New Pet";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.txtNotes, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelNotes, 0, 4);
@@ -297,7 +323,8 @@
             this.tableLayoutPanel1.Controls.Add(this.txtName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.cmbType, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.numAge, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(164, 130);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(197, 156);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -305,15 +332,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(298, 138);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 166);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(153, 93);
+            this.txtNotes.Location = new System.Drawing.Point(184, 108);
+            this.txtNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(106, 24);
+            this.txtNotes.Size = new System.Drawing.Size(126, 26);
             this.txtNotes.TabIndex = 1;
             // 
             // labelNotes
@@ -321,9 +349,10 @@
             this.labelNotes.AutoSize = true;
             this.labelNotes.BackColor = System.Drawing.Color.LavenderBlush;
             this.labelNotes.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNotes.Location = new System.Drawing.Point(3, 90);
+            this.labelNotes.Location = new System.Drawing.Point(4, 104);
+            this.labelNotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNotes.Name = "labelNotes";
-            this.labelNotes.Size = new System.Drawing.Size(74, 24);
+            this.labelNotes.Size = new System.Drawing.Size(90, 29);
             this.labelNotes.TabIndex = 0;
             this.labelNotes.Text = "Notes :";
             this.labelNotes.Click += new System.EventHandler(this.label1_Click_1);
@@ -333,9 +362,10 @@
             this.labelName.AutoSize = true;
             this.labelName.BackColor = System.Drawing.Color.LavenderBlush;
             this.labelName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(3, 0);
+            this.labelName.Location = new System.Drawing.Point(4, 0);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(75, 24);
+            this.labelName.Size = new System.Drawing.Size(91, 29);
             this.labelName.TabIndex = 2;
             this.labelName.Text = "Name :";
             // 
@@ -344,9 +374,10 @@
             this.labelType.AutoSize = true;
             this.labelType.BackColor = System.Drawing.Color.LavenderBlush;
             this.labelType.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelType.Location = new System.Drawing.Point(3, 30);
+            this.labelType.Location = new System.Drawing.Point(4, 34);
+            this.labelType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(67, 24);
+            this.labelType.Size = new System.Drawing.Size(81, 29);
             this.labelType.TabIndex = 4;
             this.labelType.Text = "Type :";
             // 
@@ -355,17 +386,19 @@
             this.labelAge.AutoSize = true;
             this.labelAge.BackColor = System.Drawing.Color.LavenderBlush;
             this.labelAge.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAge.Location = new System.Drawing.Point(3, 60);
+            this.labelAge.Location = new System.Drawing.Point(4, 70);
+            this.labelAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAge.Name = "labelAge";
-            this.labelAge.Size = new System.Drawing.Size(127, 24);
+            this.labelAge.Size = new System.Drawing.Size(153, 29);
             this.labelAge.TabIndex = 6;
             this.labelAge.Text = "Age (years) :";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(153, 3);
+            this.txtName.Location = new System.Drawing.Point(184, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(106, 24);
+            this.txtName.Size = new System.Drawing.Size(126, 26);
             this.txtName.TabIndex = 9;
             // 
             // cmbType
@@ -375,25 +408,28 @@
             "\"Cat\" ",
             "\"Dog\" ",
             "\"Bird\""});
-            this.cmbType.Location = new System.Drawing.Point(153, 33);
+            this.cmbType.Location = new System.Drawing.Point(184, 38);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(129, 24);
+            this.cmbType.Size = new System.Drawing.Size(154, 28);
             this.cmbType.TabIndex = 10;
             // 
             // numAge
             // 
-            this.numAge.Location = new System.Drawing.Point(153, 63);
+            this.numAge.Location = new System.Drawing.Point(184, 74);
+            this.numAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numAge.Name = "numAge";
-            this.numAge.Size = new System.Drawing.Size(128, 24);
+            this.numAge.Size = new System.Drawing.Size(154, 26);
             this.numAge.TabIndex = 11;
             // 
             // btnShowDeletePetPanle
             // 
             this.btnShowDeletePetPanle.Font = new System.Drawing.Font("PMingLiU-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowDeletePetPanle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnShowDeletePetPanle.Location = new System.Drawing.Point(120, 219);
+            this.btnShowDeletePetPanle.Location = new System.Drawing.Point(144, 263);
+            this.btnShowDeletePetPanle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowDeletePetPanle.Name = "btnShowDeletePetPanle";
-            this.btnShowDeletePetPanle.Size = new System.Drawing.Size(376, 41);
+            this.btnShowDeletePetPanle.Size = new System.Drawing.Size(451, 49);
             this.btnShowDeletePetPanle.TabIndex = 2;
             this.btnShowDeletePetPanle.Text = "Delete Pet";
             this.btnShowDeletePetPanle.UseVisualStyleBackColor = true;
@@ -403,9 +439,10 @@
             // 
             this.btnShowEditPetPanle.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnShowEditPetPanle.Font = new System.Drawing.Font("PMingLiU-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowEditPetPanle.Location = new System.Drawing.Point(120, 170);
+            this.btnShowEditPetPanle.Location = new System.Drawing.Point(144, 204);
+            this.btnShowEditPetPanle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowEditPetPanle.Name = "btnShowEditPetPanle";
-            this.btnShowEditPetPanle.Size = new System.Drawing.Size(376, 41);
+            this.btnShowEditPetPanle.Size = new System.Drawing.Size(451, 49);
             this.btnShowEditPetPanle.TabIndex = 4;
             this.btnShowEditPetPanle.Text = "Edit Pet";
             this.btnShowEditPetPanle.UseVisualStyleBackColor = true;
@@ -427,19 +464,33 @@
             this.panelEdit.Controls.Add(this.txtBoxOldName);
             this.panelEdit.Controls.Add(this.lblAskForOldName);
             this.panelEdit.Location = new System.Drawing.Point(0, 0);
+            this.panelEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelEdit.Name = "panelEdit";
-            this.panelEdit.Size = new System.Drawing.Size(598, 466);
+            this.panelEdit.Size = new System.Drawing.Size(718, 559);
             this.panelEdit.TabIndex = 5;
             this.panelEdit.Visible = false;
+            // 
+            // backToMenuFromEdit_btn
+            // 
+            this.backToMenuFromEdit_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToMenuFromEdit_btn.Location = new System.Drawing.Point(46, 476);
+            this.backToMenuFromEdit_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backToMenuFromEdit_btn.Name = "backToMenuFromEdit_btn";
+            this.backToMenuFromEdit_btn.Size = new System.Drawing.Size(126, 50);
+            this.backToMenuFromEdit_btn.TabIndex = 12;
+            this.backToMenuFromEdit_btn.Text = "back";
+            this.backToMenuFromEdit_btn.UseVisualStyleBackColor = true;
+            this.backToMenuFromEdit_btn.Click += new System.EventHandler(this.backToMenuFromEdit_btn_Click);
             // 
             // edit_petNotFoundLbl
             // 
             this.edit_petNotFoundLbl.AutoSize = true;
             this.edit_petNotFoundLbl.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edit_petNotFoundLbl.ForeColor = System.Drawing.Color.Red;
-            this.edit_petNotFoundLbl.Location = new System.Drawing.Point(250, 92);
+            this.edit_petNotFoundLbl.Location = new System.Drawing.Point(300, 110);
+            this.edit_petNotFoundLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.edit_petNotFoundLbl.Name = "edit_petNotFoundLbl";
-            this.edit_petNotFoundLbl.Size = new System.Drawing.Size(128, 22);
+            this.edit_petNotFoundLbl.Size = new System.Drawing.Size(154, 27);
             this.edit_petNotFoundLbl.TabIndex = 11;
             this.edit_petNotFoundLbl.Text = "Pet not Found!";
             this.edit_petNotFoundLbl.Visible = false;
@@ -449,9 +500,10 @@
             this.invalidAgeLbl.AutoSize = true;
             this.invalidAgeLbl.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.invalidAgeLbl.ForeColor = System.Drawing.Color.Red;
-            this.invalidAgeLbl.Location = new System.Drawing.Point(355, 275);
+            this.invalidAgeLbl.Location = new System.Drawing.Point(426, 330);
+            this.invalidAgeLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invalidAgeLbl.Name = "invalidAgeLbl";
-            this.invalidAgeLbl.Size = new System.Drawing.Size(100, 22);
+            this.invalidAgeLbl.Size = new System.Drawing.Size(124, 27);
             this.invalidAgeLbl.TabIndex = 10;
             this.invalidAgeLbl.Text = "invalid age!";
             this.invalidAgeLbl.Visible = false;
@@ -461,64 +513,71 @@
             this.invalidNameLbl.AutoSize = true;
             this.invalidNameLbl.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.invalidNameLbl.ForeColor = System.Drawing.Color.Red;
-            this.invalidNameLbl.Location = new System.Drawing.Point(49, 275);
+            this.invalidNameLbl.Location = new System.Drawing.Point(59, 330);
+            this.invalidNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.invalidNameLbl.Name = "invalidNameLbl";
-            this.invalidNameLbl.Size = new System.Drawing.Size(0, 22);
+            this.invalidNameLbl.Size = new System.Drawing.Size(0, 27);
             this.invalidNameLbl.TabIndex = 9;
             this.invalidNameLbl.Visible = false;
             // 
             // txtBoxNewAge
             // 
             this.txtBoxNewAge.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNewAge.Location = new System.Drawing.Point(359, 203);
+            this.txtBoxNewAge.Location = new System.Drawing.Point(431, 244);
+            this.txtBoxNewAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxNewAge.Multiline = true;
             this.txtBoxNewAge.Name = "txtBoxNewAge";
-            this.txtBoxNewAge.Size = new System.Drawing.Size(183, 63);
+            this.txtBoxNewAge.Size = new System.Drawing.Size(219, 75);
             this.txtBoxNewAge.TabIndex = 8;
             // 
             // lblAskForNewAge
             // 
             this.lblAskForNewAge.AutoSize = true;
             this.lblAskForNewAge.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAskForNewAge.Location = new System.Drawing.Point(342, 159);
+            this.lblAskForNewAge.Location = new System.Drawing.Point(410, 191);
+            this.lblAskForNewAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAskForNewAge.Name = "lblAskForNewAge";
-            this.lblAskForNewAge.Size = new System.Drawing.Size(211, 28);
+            this.lblAskForNewAge.Size = new System.Drawing.Size(259, 34);
             this.lblAskForNewAge.TabIndex = 7;
             this.lblAskForNewAge.Text = "Enter Pet New Age:";
             // 
             // txtBoxNewName
             // 
             this.txtBoxNewName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNewName.Location = new System.Drawing.Point(38, 203);
+            this.txtBoxNewName.Location = new System.Drawing.Point(46, 244);
+            this.txtBoxNewName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxNewName.Multiline = true;
             this.txtBoxNewName.Name = "txtBoxNewName";
-            this.txtBoxNewName.Size = new System.Drawing.Size(183, 63);
+            this.txtBoxNewName.Size = new System.Drawing.Size(219, 75);
             this.txtBoxNewName.TabIndex = 6;
             // 
             // lblAskForNewName
             // 
             this.lblAskForNewName.AutoSize = true;
             this.lblAskForNewName.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAskForNewName.Location = new System.Drawing.Point(22, 159);
+            this.lblAskForNewName.Location = new System.Drawing.Point(26, 191);
+            this.lblAskForNewName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAskForNewName.Name = "lblAskForNewName";
-            this.lblAskForNewName.Size = new System.Drawing.Size(230, 28);
+            this.lblAskForNewName.Size = new System.Drawing.Size(285, 34);
             this.lblAskForNewName.TabIndex = 5;
             this.lblAskForNewName.Text = "Enter Pet New Name:";
             // 
             // lblResponseToEdit
             // 
             this.lblResponseToEdit.AutoSize = true;
-            this.lblResponseToEdit.Location = new System.Drawing.Point(35, 105);
+            this.lblResponseToEdit.Location = new System.Drawing.Point(42, 126);
+            this.lblResponseToEdit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResponseToEdit.Name = "lblResponseToEdit";
-            this.lblResponseToEdit.Size = new System.Drawing.Size(0, 17);
+            this.lblResponseToEdit.Size = new System.Drawing.Size(0, 20);
             this.lblResponseToEdit.TabIndex = 4;
             // 
             // editPetbtn
             // 
             this.editPetbtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editPetbtn.Location = new System.Drawing.Point(194, 299);
+            this.editPetbtn.Location = new System.Drawing.Point(233, 359);
+            this.editPetbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editPetbtn.Name = "editPetbtn";
-            this.editPetbtn.Size = new System.Drawing.Size(180, 68);
+            this.editPetbtn.Size = new System.Drawing.Size(216, 82);
             this.editPetbtn.TabIndex = 4;
             this.editPetbtn.Text = "press to edit";
             this.editPetbtn.UseVisualStyleBackColor = true;
@@ -528,18 +587,20 @@
             // 
             this.txtBoxOldName.BackColor = System.Drawing.SystemColors.Window;
             this.txtBoxOldName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxOldName.Location = new System.Drawing.Point(38, 71);
+            this.txtBoxOldName.Location = new System.Drawing.Point(46, 85);
+            this.txtBoxOldName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxOldName.Multiline = true;
             this.txtBoxOldName.Name = "txtBoxOldName";
-            this.txtBoxOldName.Size = new System.Drawing.Size(185, 63);
+            this.txtBoxOldName.Size = new System.Drawing.Size(221, 75);
             this.txtBoxOldName.TabIndex = 4;
             // 
             // lblAskForOldName
             // 
             this.lblAskForOldName.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAskForOldName.Location = new System.Drawing.Point(22, 23);
+            this.lblAskForOldName.Location = new System.Drawing.Point(26, 28);
+            this.lblAskForOldName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAskForOldName.Name = "lblAskForOldName";
-            this.lblAskForOldName.Size = new System.Drawing.Size(352, 49);
+            this.lblAskForOldName.Size = new System.Drawing.Size(422, 59);
             this.lblAskForOldName.TabIndex = 4;
             this.lblAskForOldName.Text = "Enter Pet Name to Edit:";
             // 
@@ -551,20 +612,34 @@
             this.panelDelete.Controls.Add(this.txtboxName);
             this.panelDelete.Controls.Add(this.lblAskForNameToDelete);
             this.panelDelete.Controls.Add(this.DeletePetbtn);
-            this.panelDelete.Location = new System.Drawing.Point(120, 27);
+            this.panelDelete.Location = new System.Drawing.Point(144, 32);
+            this.panelDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDelete.Name = "panelDelete";
-            this.panelDelete.Size = new System.Drawing.Size(418, 313);
+            this.panelDelete.Size = new System.Drawing.Size(502, 376);
             this.panelDelete.TabIndex = 5;
             this.panelDelete.Visible = false;
+            // 
+            // backToMenuFromdelete_btn
+            // 
+            this.backToMenuFromdelete_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToMenuFromdelete_btn.Location = new System.Drawing.Point(20, 318);
+            this.backToMenuFromdelete_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backToMenuFromdelete_btn.Name = "backToMenuFromdelete_btn";
+            this.backToMenuFromdelete_btn.Size = new System.Drawing.Size(114, 37);
+            this.backToMenuFromdelete_btn.TabIndex = 13;
+            this.backToMenuFromdelete_btn.Text = "back";
+            this.backToMenuFromdelete_btn.UseVisualStyleBackColor = true;
+            this.backToMenuFromdelete_btn.Click += new System.EventHandler(this.backToMenuFromdelete_btn_Click);
             // 
             // Delete_PetNotFound_lbl
             // 
             this.Delete_PetNotFound_lbl.AutoSize = true;
             this.Delete_PetNotFound_lbl.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete_PetNotFound_lbl.ForeColor = System.Drawing.Color.Red;
-            this.Delete_PetNotFound_lbl.Location = new System.Drawing.Point(42, 130);
+            this.Delete_PetNotFound_lbl.Location = new System.Drawing.Point(50, 156);
+            this.Delete_PetNotFound_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Delete_PetNotFound_lbl.Name = "Delete_PetNotFound_lbl";
-            this.Delete_PetNotFound_lbl.Size = new System.Drawing.Size(128, 22);
+            this.Delete_PetNotFound_lbl.Size = new System.Drawing.Size(154, 27);
             this.Delete_PetNotFound_lbl.TabIndex = 3;
             this.Delete_PetNotFound_lbl.Text = "Pet not Found!";
             this.Delete_PetNotFound_lbl.Visible = false;
@@ -572,27 +647,30 @@
             // txtboxName
             // 
             this.txtboxName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxName.Location = new System.Drawing.Point(29, 57);
+            this.txtboxName.Location = new System.Drawing.Point(35, 68);
+            this.txtboxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtboxName.Multiline = true;
             this.txtboxName.Name = "txtboxName";
-            this.txtboxName.Size = new System.Drawing.Size(161, 58);
+            this.txtboxName.Size = new System.Drawing.Size(192, 69);
             this.txtboxName.TabIndex = 2;
             // 
             // lblAskForNameToDelete
             // 
             this.lblAskForNameToDelete.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAskForNameToDelete.Location = new System.Drawing.Point(12, 15);
+            this.lblAskForNameToDelete.Location = new System.Drawing.Point(14, 18);
+            this.lblAskForNameToDelete.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAskForNameToDelete.Name = "lblAskForNameToDelete";
-            this.lblAskForNameToDelete.Size = new System.Drawing.Size(314, 33);
+            this.lblAskForNameToDelete.Size = new System.Drawing.Size(377, 40);
             this.lblAskForNameToDelete.TabIndex = 1;
             this.lblAskForNameToDelete.Text = "Enter Pet Name to delete:";
             // 
             // DeletePetbtn
             // 
             this.DeletePetbtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeletePetbtn.Location = new System.Drawing.Point(118, 190);
+            this.DeletePetbtn.Location = new System.Drawing.Point(142, 228);
+            this.DeletePetbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeletePetbtn.Name = "DeletePetbtn";
-            this.DeletePetbtn.Size = new System.Drawing.Size(176, 66);
+            this.DeletePetbtn.Size = new System.Drawing.Size(211, 79);
             this.DeletePetbtn.TabIndex = 0;
             this.DeletePetbtn.Text = "press to delete";
             this.DeletePetbtn.UseVisualStyleBackColor = true;
@@ -602,9 +680,10 @@
             // 
             this.btnShowAddPetPanle.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnShowAddPetPanle.Font = new System.Drawing.Font("PMingLiU-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowAddPetPanle.Location = new System.Drawing.Point(122, 124);
+            this.btnShowAddPetPanle.Location = new System.Drawing.Point(146, 149);
+            this.btnShowAddPetPanle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowAddPetPanle.Name = "btnShowAddPetPanle";
-            this.btnShowAddPetPanle.Size = new System.Drawing.Size(376, 41);
+            this.btnShowAddPetPanle.Size = new System.Drawing.Size(451, 49);
             this.btnShowAddPetPanle.TabIndex = 6;
             this.btnShowAddPetPanle.Text = "Add Pet";
             this.btnShowAddPetPanle.UseVisualStyleBackColor = true;
@@ -613,6 +692,7 @@
             // MainMenu_panel
             // 
             this.MainMenu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.MainMenu_panel.Controls.Add(this.panelSearch);
             this.MainMenu_panel.Controls.Add(this.btnShowInteractPetPanle);
             this.MainMenu_panel.Controls.Add(this.btnShowSearchPetPanle);
             this.MainMenu_panel.Controls.Add(this.pictureBox1);
@@ -622,9 +702,9 @@
             this.MainMenu_panel.Controls.Add(this.btnShowDeletePetPanle);
             this.MainMenu_panel.Controls.Add(this.btnShowEditPetPanle);
             this.MainMenu_panel.Location = new System.Drawing.Point(0, 0);
-            this.MainMenu_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainMenu_panel.Margin = new System.Windows.Forms.Padding(2);
             this.MainMenu_panel.Name = "MainMenu_panel";
-            this.MainMenu_panel.Size = new System.Drawing.Size(752, 580);
+            this.MainMenu_panel.Size = new System.Drawing.Size(902, 696);
             this.MainMenu_panel.TabIndex = 12;
             this.MainMenu_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -632,9 +712,10 @@
             // 
             this.btnShowInteractPetPanle.Font = new System.Drawing.Font("PMingLiU-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowInteractPetPanle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnShowInteractPetPanle.Location = new System.Drawing.Point(120, 313);
+            this.btnShowInteractPetPanle.Location = new System.Drawing.Point(144, 376);
+            this.btnShowInteractPetPanle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowInteractPetPanle.Name = "btnShowInteractPetPanle";
-            this.btnShowInteractPetPanle.Size = new System.Drawing.Size(376, 41);
+            this.btnShowInteractPetPanle.Size = new System.Drawing.Size(451, 49);
             this.btnShowInteractPetPanle.TabIndex = 10;
             this.btnShowInteractPetPanle.Text = "Interact Pet";
             this.btnShowInteractPetPanle.UseVisualStyleBackColor = true;
@@ -644,9 +725,10 @@
             // 
             this.btnShowSearchPetPanle.Font = new System.Drawing.Font("PMingLiU-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowSearchPetPanle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnShowSearchPetPanle.Location = new System.Drawing.Point(120, 266);
+            this.btnShowSearchPetPanle.Location = new System.Drawing.Point(144, 319);
+            this.btnShowSearchPetPanle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowSearchPetPanle.Name = "btnShowSearchPetPanle";
-            this.btnShowSearchPetPanle.Size = new System.Drawing.Size(376, 41);
+            this.btnShowSearchPetPanle.Size = new System.Drawing.Size(451, 49);
             this.btnShowSearchPetPanle.TabIndex = 9;
             this.btnShowSearchPetPanle.Text = "Search Pet";
             this.btnShowSearchPetPanle.UseVisualStyleBackColor = true;
@@ -657,10 +739,10 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = global::programming3_PetCare_System.Properties.Resources.Screenshot_2025_11_11_181403;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(120, 438);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 526);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(378, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(454, 187);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -670,10 +752,10 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("MV Boli", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(151, 79);
+            this.label2.Location = new System.Drawing.Point(181, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(350, 34);
+            this.label2.Size = new System.Drawing.Size(417, 41);
             this.label2.TabIndex = 7;
             this.label2.Text = "Choose An Action To Do";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -683,45 +765,120 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("MV Boli", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 22);
+            this.label1.Location = new System.Drawing.Point(137, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 45);
+            this.label1.Size = new System.Drawing.Size(496, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "..:::.. PET CARE ..:::..";
             // 
-            // backToMenuFromEdit_btn
+            // panelSearch
             // 
-            this.backToMenuFromEdit_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToMenuFromEdit_btn.Location = new System.Drawing.Point(38, 397);
-            this.backToMenuFromEdit_btn.Name = "backToMenuFromEdit_btn";
-            this.backToMenuFromEdit_btn.Size = new System.Drawing.Size(105, 42);
-            this.backToMenuFromEdit_btn.TabIndex = 12;
-            this.backToMenuFromEdit_btn.Text = "back";
-            this.backToMenuFromEdit_btn.UseVisualStyleBackColor = true;
-            this.backToMenuFromEdit_btn.Click += new System.EventHandler(this.backToMenuFromEdit_btn_Click);
+            this.panelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelSearch.Controls.Add(this.btnBackToMain);
+            this.panelSearch.Controls.Add(this.SearchResult);
+            this.panelSearch.Controls.Add(this.txtPetName);
+            this.panelSearch.Controls.Add(this.btnSearch);
+            this.panelSearch.Controls.Add(this.pictureBox2);
+            this.panelSearch.Controls.Add(this.label3);
+            this.panelSearch.Controls.Add(this.label4);
+            this.panelSearch.Location = new System.Drawing.Point(2, 2);
+            this.panelSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(902, 696);
+            this.panelSearch.TabIndex = 13;
             // 
-            // backToMenuFromdelete_btn
+            // btnSearch
             // 
-            this.backToMenuFromdelete_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToMenuFromdelete_btn.Location = new System.Drawing.Point(17, 265);
-            this.backToMenuFromdelete_btn.Name = "backToMenuFromdelete_btn";
-            this.backToMenuFromdelete_btn.Size = new System.Drawing.Size(95, 31);
-            this.backToMenuFromdelete_btn.TabIndex = 13;
-            this.backToMenuFromdelete_btn.Text = "back";
-            this.backToMenuFromdelete_btn.UseVisualStyleBackColor = true;
-            this.backToMenuFromdelete_btn.Click += new System.EventHandler(this.backToMenuFromdelete_btn_Click);
+            this.btnSearch.Font = new System.Drawing.Font("PMingLiU-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSearch.Location = new System.Drawing.Point(196, 248);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(402, 49);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Search Pet";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
+            this.pictureBox2.Image = global::programming3_PetCare_System.Properties.Resources.Screenshot_2025_11_11_181403;
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(168, 524);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(454, 187);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label3.Font = new System.Drawing.Font("MV Boli", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(181, 107);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(464, 41);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Enter Pet Name To Search";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("MV Boli", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(137, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(496, 52);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "..:::.. PET CARE ..:::..";
+            // 
+            // txtPetName
+            // 
+            this.txtPetName.Location = new System.Drawing.Point(196, 175);
+            this.txtPetName.Multiline = true;
+            this.txtPetName.Name = "txtPetName";
+            this.txtPetName.Size = new System.Drawing.Size(402, 48);
+            this.txtPetName.TabIndex = 10;
+            this.txtPetName.TextChanged += new System.EventHandler(this.txtPetName_TextChanged);
+            // 
+            // SearchResult
+            // 
+            this.SearchResult.Location = new System.Drawing.Point(196, 328);
+            this.SearchResult.Multiline = true;
+            this.SearchResult.Name = "SearchResult";
+            this.SearchResult.Size = new System.Drawing.Size(402, 48);
+            this.SearchResult.TabIndex = 11;
+            // 
+            // btnBackToMain
+            // 
+            this.btnBackToMain.Font = new System.Drawing.Font("PMingLiU-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToMain.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBackToMain.Location = new System.Drawing.Point(196, 414);
+            this.btnBackToMain.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackToMain.Name = "btnBackToMain";
+            this.btnBackToMain.Size = new System.Drawing.Size(402, 49);
+            this.btnBackToMain.TabIndex = 12;
+            this.btnBackToMain.Text = "Back";
+            this.btnBackToMain.UseVisualStyleBackColor = true;
+            this.btnBackToMain.Click += new System.EventHandler(this.btnBackToMain_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(821, 559);
+            this.ClientSize = new System.Drawing.Size(985, 671);
             this.Controls.Add(this.MainMenu_panel);
             this.Controls.Add(this.panelEdit);
             this.Controls.Add(this.panelDelete);
             this.Controls.Add(this.panelAdd);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = ".::.PET CARE.::.";
             this.panelAdd.ResumeLayout(false);
@@ -740,6 +897,9 @@
             this.MainMenu_panel.ResumeLayout(false);
             this.MainMenu_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelSearch.ResumeLayout(false);
+            this.panelSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -799,6 +959,14 @@
         private System.Windows.Forms.Button btnShowSearchPetPanle;
         private System.Windows.Forms.Button backToMenuFromEdit_btn;
         private System.Windows.Forms.Button backToMenuFromdelete_btn;
+        private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPetName;
+        private System.Windows.Forms.TextBox SearchResult;
+        private System.Windows.Forms.Button btnBackToMain;
     }
 }
 
