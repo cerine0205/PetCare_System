@@ -32,7 +32,29 @@ namespace programming3_PetCare_System
 
         }
 
+        //هذا اضفته لكودك عشان يظهر البانل حقك
+        private void btnShowAddPetPanle_Click_1(object sender, EventArgs e)
+        {
+            panelAdd.Visible = true;
 
+            MainMenu_panel.Visible = false;
+            panelEdit.Visible = false;
+            panelDelete.Visible = false;
+            //panelSearch.Visible = false;
+            //panelInteract.Visible = false;
+        }
+
+        //وهذي عشان يرجع للواجهه
+        private void backToMenuFromAdd_btn_Click(object sender, EventArgs e)
+        {
+            MainMenu_panel.Visible = true;
+
+            panelEdit.Visible = false;
+            panelDelete.Visible = false;
+            panelAdd.Visible = false;
+            //panelSearch.Visible = false;
+            //panelInteract.Visible = false;
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -81,7 +103,7 @@ namespace programming3_PetCare_System
         {
             panelAdd.Visible = true;
             btnDone.Visible = true;
-            btnBack.Visible = true;
+            backToMenuFromAdd_btn.Visible = true;
 
         }
 
@@ -135,7 +157,7 @@ namespace programming3_PetCare_System
         {
             panelAdd.Visible = false;
             btnDone.Visible = false;
-            btnBack.Visible = false;
+            backToMenuFromAdd_btn.Visible = false;
             panelMain.Visible = true;
         }
 
@@ -144,6 +166,8 @@ namespace programming3_PetCare_System
         private void btnShowDeletePetPanle_Click(object sender, EventArgs e)
         {
             panelDelete.Visible = true;
+
+            MainMenu_panel.Visible = false;
             panelEdit.Visible = false;
             panelAdd.Visible = false;
             //panelSearch.Visible = false;
@@ -154,6 +178,8 @@ namespace programming3_PetCare_System
         private void btnShowEditPetPanle_Click(object sender, EventArgs e)
         {
             panelEdit.Visible = true;
+
+            MainMenu_panel.Visible = false;
             panelDelete.Visible = false;
             panelAdd.Visible = false;
             //panelSearch.Visible = false;
@@ -250,17 +276,78 @@ namespace programming3_PetCare_System
 
             }
 
+
+
         }
 
-        private void btn_showAddPanel_Test_btn_Click(object sender, EventArgs e)
+
+
+        private void backToMenuFromEdit_btn_Click(object sender, EventArgs e)
         {
+            MainMenu_panel.Visible = true;
+
             panelEdit.Visible = false;
             panelDelete.Visible = false;
-            panelAdd.Visible = true;
-           //panelSearch.Visible = false;
-           //panelInteract.Visible = false;
+            panelAdd.Visible = false;
+            //panelSearch.Visible = false;
+            //panelInteract.Visible = false;
         }
 
+        private void backToMenuFromdelete_btn_Click(object sender, EventArgs e)
+        {
+            MainMenu_panel.Visible = true;
+
+            panelEdit.Visible = false;
+            panelDelete.Visible = false;
+            panelAdd.Visible = false;
+            //panelSearch.Visible = false;
+            //panelInteract.Visible = false;
+
+        }
+
+        // end cerine code
+
+
+
+   
+
+
+
+
+
+
+        // هنا اضفت ذا لكود هاجر عشان يبين البانلز
+        private void btnShowSearchPetPanle_Click(object sender, EventArgs e)
+        {
+            //panelSearch.Visible = true;
+
+            MainMenu_panel.Visible = false;
+            panelEdit.Visible = false;
+            panelDelete.Visible = false;
+            panelAdd.Visible = false;
+            //panelInteract.Visible = false;
+        }
+
+        private void btnShowInteractPetPanle_Click(object sender, EventArgs e)
+        {
+
+           //panelInteract.Visible = true;
+
+            MainMenu_panel.Visible = false;
+            panelEdit.Visible = false;
+            panelDelete.Visible = false;
+            panelAdd.Visible = false;
+            //panelSearch.Visible = false;
+        }
+
+
+
+
+       
+
+
+
+        // هذي حقت وش؟
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -270,8 +357,13 @@ namespace programming3_PetCare_System
         {
 
         }
-        // end cerine code
+
+       
     }
 
-    
+
+
+
+
+
 }
