@@ -22,11 +22,6 @@ namespace programming3_PetCare_System
             manager.AddPet(new Cat("Luna", 1, ""));
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click_1(object sender, EventArgs e)
         {
 
@@ -264,6 +259,16 @@ namespace programming3_PetCare_System
             panelAdd.Visible = true;
            //panelSearch.Visible = false;
            //panelInteract.Visible = false;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
         // end cerine code
     }
