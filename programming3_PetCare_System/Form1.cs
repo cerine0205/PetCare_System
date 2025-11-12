@@ -149,8 +149,7 @@ namespace programming3_PetCare_System
             panelDelete.Visible = false;
             panelEdit.Visible = false;
             panelSearch.Visible = false;
-
-            // panelInteract.Visible = true;
+            panelInteract.Visible = true;
         }
 
         private void btnDone_Click(object sender, EventArgs e)
@@ -171,7 +170,7 @@ namespace programming3_PetCare_System
             panelEdit.Visible = false;
             panelAdd.Visible = false;
             panelSearch.Visible = false;
-            //panelInteract.Visible = false;
+            panelInteract.Visible = false;
 
         }
 
@@ -183,7 +182,7 @@ namespace programming3_PetCare_System
             panelDelete.Visible = false;
             panelAdd.Visible = false;
             panelSearch.Visible = false;
-            //panelInteract.Visible = false;
+            panelInteract.Visible = false;
 
         }
 
@@ -290,7 +289,7 @@ namespace programming3_PetCare_System
             panelDelete.Visible = false;
             panelAdd.Visible = false;
             panelSearch.Visible = false;
-            //panelInteract.Visible = false;
+            panelInteract.Visible = false;
         }
 
         private void backToMenuFromdelete_btn_Click(object sender, EventArgs e)
@@ -301,7 +300,7 @@ namespace programming3_PetCare_System
             panelDelete.Visible = false;
             panelAdd.Visible = false;
             panelSearch.Visible = false;
-            //panelInteract.Visible = false;
+            panelInteract.Visible = false;
 
         }
 
@@ -320,19 +319,16 @@ namespace programming3_PetCare_System
         private void btnShowSearchPetPanle_Click(object sender, EventArgs e)
         {
             panelSearch.Visible = true;
-
             MainMenu_panel.Visible = false;
             panelEdit.Visible = false;
             panelDelete.Visible = false;
             panelAdd.Visible = false;
-            //panelInteract.Visible = false;
+            panelInteract.Visible = false;
         }
 
         private void btnShowInteractPetPanle_Click(object sender, EventArgs e)
         {
-
-            //panelInteract.Visible = true;
-
+            panelInteract.Visible = true;
             MainMenu_panel.Visible = false;
             panelEdit.Visible = false;
             panelDelete.Visible = false;
@@ -369,11 +365,13 @@ namespace programming3_PetCare_System
             var pet = manager.SearchPet(name);
             if (pet != null)
             {
-                MessageBox.Show("Pet Found: " + pet.DisplayInfo());
+                lblResult.Text="Pet Found: " + pet.DisplayInfo();
+                lblResult.ForeColor = Color.Green;
             }
             else
             {
-                MessageBox.Show("Pet Not Found");
+                lblResult.Text="Pet Not Found";
+                lblResult.ForeColor = Color.Red;
             }
         }
 
@@ -385,7 +383,69 @@ namespace programming3_PetCare_System
             panelDelete.Visible = false;
             panelAdd.Visible = false;
             panelSearch.Visible = false;
-            //panelInteract.Visible = false;
+            panelInteract.Visible = false;
+        }
+
+        private void SearchResult_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelSearch_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnInteract_Click(object sender, EventArgs e)
+        {
+            string name=textPetName.Text.Trim();
+            int action = cmbAction.SelectedIndex+1;
+            string result="";
+            var pet=manager.SearchPet(name);
+            if(pet==null)
+            {
+                lblInteractResult.Text="Pet Not Found.";
+                lblInteractResult.ForeColor = Color.Red;
+                return;
+            }
+            if (string.IsNullOrEmpty(name))
+            {
+                lblInteractResult.Text="Please enter a pet name.";
+                lblInteractResult.ForeColor = Color.Red;
+                return;
+            }
+            if(cmbAction.SelectedItem==null)
+            {
+                lblInteractResult.Text="Please select an action.";
+                lblInteractResult.ForeColor = Color.OrangeRed;
+                return;
+            }
+            if (action == 1)
+            {
+                result = pet.Feed();
+            }
+            else if (action == 2)
+            {
+                result = pet.Play();
+            }
+            else if (action == 3)
+            {
+                result = pet.Feed()+Environment.NewLine+pet.Play();
+            }
+            lblInteractResult.Text=result;
+            lblInteractResult.ForeColor = Color.Green;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenu_panel.Visible = true;
+
+            panelEdit.Visible = false;
+            panelDelete.Visible = false;
+            panelAdd.Visible = false;
+            panelSearch.Visible = false;
+            panelInteract.Visible = false;
         }
     }
 }
