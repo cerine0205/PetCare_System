@@ -22,18 +22,7 @@ namespace programming3_PetCare_System
             manager.AddPet(new Cat("Luna", 1, ""));
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        //هذا اضفته لكودك عشان يظهر البانل حقك
-        private void btnShowAddPetPanle_Click_1(object sender, EventArgs e)
+             private void btnShowAddPetPanle_Click_1(object sender, EventArgs e)
         {
             panelAdd.Visible = true;
 
@@ -41,19 +30,7 @@ namespace programming3_PetCare_System
             panelEdit.Visible = false;
             panelDelete.Visible = false;
             panelSearch.Visible = false;
-            //panelInteract.Visible = false;
-        }
-
-        //وهذي عشان يرجع للواجهه
-        private void backToMenuFromAdd_btn_Click(object sender, EventArgs e)
-        {
-            MainMenu_panel.Visible = true;
-
-            panelEdit.Visible = false;
-            panelDelete.Visible = false;
-            panelAdd.Visible = false;
-            panelSearch.Visible = false;
-            //panelInteract.Visible = false;
+            panelInteract.Visible = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -156,8 +133,8 @@ namespace programming3_PetCare_System
         {
             panelAdd.Visible = false;
             btnDone.Visible = false;
-            backToMenuFromAdd_btn.Visible = false;
-            panelMain.Visible = true;
+            //backToMenuFromAdd_btn.Visible = false;
+            MainMenu_panel.Visible = true;
         }
 
 
@@ -184,6 +161,13 @@ namespace programming3_PetCare_System
             panelSearch.Visible = false;
             panelInteract.Visible = false;
 
+
+            txtBoxNewAge.Text = "";
+            txtBoxNewName.Text = "";
+            txtBoxOldName.Text = "";
+            edit_petNotFoundLbl.Visible = false;
+            invalidAgeLbl.Visible = false;
+            invalidNameLbl.Visible = false;
         }
 
         private void DeletePetbtn_Click(object sender, EventArgs e)
@@ -208,6 +192,7 @@ namespace programming3_PetCare_System
             edit_petNotFoundLbl.Visible = false;
             invalidAgeLbl.Visible = false;
             invalidNameLbl.Visible = false;
+        
 
             string oldname = txtBoxOldName.Text.Trim();
             Pet oldPet = manager.SearchPet(oldname);
@@ -280,30 +265,6 @@ namespace programming3_PetCare_System
         }
 
 
-
-        private void backToMenuFromEdit_btn_Click(object sender, EventArgs e)
-        {
-            MainMenu_panel.Visible = true;
-
-            panelEdit.Visible = false;
-            panelDelete.Visible = false;
-            panelAdd.Visible = false;
-            panelSearch.Visible = false;
-            panelInteract.Visible = false;
-        }
-
-        private void backToMenuFromdelete_btn_Click(object sender, EventArgs e)
-        {
-            MainMenu_panel.Visible = true;
-
-            panelEdit.Visible = false;
-            panelDelete.Visible = false;
-            panelAdd.Visible = false;
-            panelSearch.Visible = false;
-            panelInteract.Visible = false;
-
-        }
-
         // end cerine code
 
 
@@ -343,22 +304,6 @@ namespace programming3_PetCare_System
 
 
 
-        // هذي حقت وش؟
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPetName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             String name = txtPetName.Text;
@@ -386,15 +331,6 @@ namespace programming3_PetCare_System
             panelInteract.Visible = false;
         }
 
-        private void SearchResult_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelSearch_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnInteract_Click(object sender, EventArgs e)
         {
@@ -437,61 +373,8 @@ namespace programming3_PetCare_System
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MainMenu_panel.Visible = true;
 
-            panelEdit.Visible = false;
-            panelDelete.Visible = false;
-            panelAdd.Visible = false;
-            panelSearch.Visible = false;
-            panelInteract.Visible = false;
-        }
-
-        private void lblAskForNewAge_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelAdd_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
     
