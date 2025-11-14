@@ -761,7 +761,7 @@
             this.panelSearch.Controls.Add(this.pictureBox2);
             this.panelSearch.Controls.Add(this.label3);
             this.panelSearch.Controls.Add(this.label4);
-            this.panelSearch.Location = new System.Drawing.Point(683, 203);
+            this.panelSearch.Location = new System.Drawing.Point(0, 0);
             this.panelSearch.Margin = new System.Windows.Forms.Padding(2);
             this.panelSearch.Name = "panelSearch";
             this.panelSearch.Size = new System.Drawing.Size(667, 529);
@@ -1004,10 +1004,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(697, 592);
             this.Controls.Add(this.MainMenu_panel);
+            this.Controls.Add(this.panelSearch);
             this.Controls.Add(this.panelEdit);
             this.Controls.Add(this.panelInteract);
             this.Controls.Add(this.panelDelete);
-            this.Controls.Add(this.panelSearch);
             this.Controls.Add(this.panelAdd);
             this.Name = "Form1";
             this.Text = ".::.PET CARE.::.";
