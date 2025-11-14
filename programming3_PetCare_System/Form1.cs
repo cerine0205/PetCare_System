@@ -21,7 +21,7 @@ namespace programming3_PetCare_System
             manager.AddPet(new Dog("Max", 5, ""));
             manager.AddPet(new Cat("Luna", 1, ""));
         }
-
+        // ddjojefoirfjowifjowfjowf
              private void btnShowAddPetPanle_Click_1(object sender, EventArgs e)
         {
             panelAdd.Visible = true;
