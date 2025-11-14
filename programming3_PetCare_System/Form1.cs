@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,7 @@ namespace programming3_PetCare_System
             manager.AddPet(new Cat("Luna", 1, ""));
         }
         // ddjojefoirfjowifjowfjowf
-             private void btnShowAddPetPanle_Click_1(object sender, EventArgs e)
+        private void btnShowAddPetPanle_Click_1(object sender, EventArgs e)
         {
             panelAdd.Visible = true;
 
@@ -31,111 +32,86 @@ namespace programming3_PetCare_System
             panelDelete.Visible = false;
             panelSearch.Visible = false;
             panelInteract.Visible = false;
+
+            btnDone.Visible = true;
+            backToMenuFromAdd_btn.Visible = true;
+
+            lblNameError.Visible = false;
+            lblTypeError.Visible = false;
+            lblAgeError.Visible = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+
+
+            string name = txtName.Text.Trim();
+            int typeIndex = cmbType.SelectedIndex;
+            int age = (int)numAge.Value;
+            string notes = txtNotes.Text;
+
+            if (string.IsNullOrEmpty(name))
             {
-
-                string name = txtName.Text;
-                string type = cmbType.SelectedItem.ToString();
-                int age = (int)numAge.Value;
-                string notes = txtNotes.Text;
-
-                if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(type) || age <= 0)
-                {
-                    MessageBox.Show("Please make sure to fill in all fields correctly.");
-                    return;
-                }
-
-
-                if (type == "Dog")
-                {
-                    manager.AddPet(new Dog(name, age, notes));
-                }
-                else if (type == "Cat")
-                {
-                    manager.AddPet(new Cat(name, age, notes));
-                }
-                else if (type == "bird")
-                {
-                    manager.AddPet(new Bird(name, age, notes));
-                }
-
-                MessageBox.Show("Add Pet : " + name + " " + type + " " + age + "years " + " Notes :" + notes);
-
-                ClearFields();
-
-
+                lblNameError.Text = "Please enter a pet name";
+                lblNameError.Visible = true;
+                return;
             }
+            if (typeIndex < 0)
+            {
+                lblTypeError.Text = "Please select a pet type";
+                lblTypeError.Visible = true;
+                return;
+            }
+            if (age <= 0)
+            {
+                lblAgeError.Text = "Please enter a valid age";
+                lblAgeError.Visible = true;
+                return;
+            }
+            string typeText = cmbType.SelectedItem.ToString();
+
+
+            if (typeIndex == 0) //Dog
+            {
+                manager.AddPet(new Dog(name, age, notes));
+            }
+            else if (typeIndex == 1) //Cat
+            {
+                manager.AddPet(new Cat(name, age, notes));
+            }
+            else if (typeIndex == 2) //Bird
+            {
+                manager.AddPet(new Bird(name, age, notes));
+            }
+
+            MessageBox.Show("Add Pet : " + name + " " + typeText + " " + age + "years " + " Notes :" + notes);
+
+            ClearFields();
+
+
+
         }
         private void ClearFields()
         {
             txtName.Clear();
-            cmbType.SelectedItem = -1;
+            cmbType.SelectedIndex = -1;
             numAge.Value = 0;
             txtNotes.Clear();
         }
-        private void btnShowAddPetPanle_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            panelAdd.Visible = true;
-            btnDone.Visible = true;
-            backToMenuFromAdd_btn.Visible = true;
+            ClearFields();
 
-        }
-
-        private void btnAddPet_Click(object sender, EventArgs e)
-        {
-            panelDelete.Visible = false;
-            panelEdit.Visible = false;
-            panelSearch.Visible = false;
-
-            panelAdd.Visible = true;
-        }
-
-        private void btnDeletePet_Click(object sender, EventArgs e)
-        {
-            panelAdd.Visible = false;
-            panelEdit.Visible = false;
-            panelSearch.Visible = false;
-
-            panelDelete.Visible = true;
-        }
-
-        private void btnEditPet_Click(object sender, EventArgs e)
-        {
-            panelDelete.Visible = false;
-            panelAdd.Visible = false;
-            panelSearch.Visible = false;
-
-            panelEdit.Visible = true;
-        }
-
-        private void btnSearchPet_Click(object sender, EventArgs e)
-        {
-            panelDelete.Visible = false;
-            panelEdit.Visible = false;
-            panelAdd.Visible = false;
-
-            panelSearch.Visible = true;
-        }
-
-        private void btnInteractWithPet_Click(object sender, EventArgs e)
-        {
-            panelAdd.Visible = false;
-            panelDelete.Visible = false;
-            panelEdit.Visible = false;
-            panelSearch.Visible = false;
-            panelInteract.Visible = true;
         }
 
         private void btnDone_Click(object sender, EventArgs e)
         {
             panelAdd.Visible = false;
-            btnDone.Visible = false;
             //backToMenuFromAdd_btn.Visible = false;
             MainMenu_panel.Visible = true;
         }
+
+  
 
 
         //cerine code
@@ -373,8 +349,26 @@ namespace programming3_PetCare_System
 
         }
 
+        private void btnViewAllPets_Click(object sender, EventArgs e)
+        {
+           
+            lstPets.Items.Clear();
 
-     
+            ArrayList allPets = manager.GetAllPets();
+
+            if (allPets == null || allPets.Count == 0)
+            {
+                lstPets.Items.Add("No Pets Found");
+                return;
+            }
+            foreach (var p in allPets)
+            {
+                Pet pet = (Pet)p;
+                lstPets.Items.Add(pet.Name + " - " + pet.Age + "years");
+            }
+
+        }
+    
     }
 }
     

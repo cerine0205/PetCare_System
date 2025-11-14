@@ -143,7 +143,7 @@ namespace programming3_PetCare_System
     {
         private ArrayList pets = new ArrayList();
 
-        public void AddPet<T>(T pet)
+        public void AddPet(Pet pet)
         {
             pets.Add(pet);
         }
@@ -189,6 +189,10 @@ namespace programming3_PetCare_System
             {
                 return false;
             }
+        }
+        public ArrayList GetAllPets()
+        {
+            return pets;
         }
 
         public void DisplayAllPets()
