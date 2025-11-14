@@ -52,7 +52,7 @@ namespace programming3_PetCare_System
 
             if (string.IsNullOrEmpty(name))
             {
-                lblNameError.Text = "Please enter a pet name";
+                lblNameError.Text = "Invalid name !";
                 lblNameError.Visible = true;
                 return;
             }
@@ -64,7 +64,7 @@ namespace programming3_PetCare_System
             }
             if (age <= 0)
             {
-                lblAgeError.Text = "Please enter a valid age";
+                lblAgeError.Text = "Invalid age ";
                 lblAgeError.Visible = true;
                 return;
             }
