@@ -132,7 +132,7 @@
             this.panelAdd.Controls.Add(this.backToMenuFromAdd_btn);
             this.panelAdd.Controls.Add(this.btnDone);
             this.panelAdd.Controls.Add(this.tableLayoutPanel1);
-            this.panelAdd.Location = new System.Drawing.Point(11, 11);
+            this.panelAdd.Location = new System.Drawing.Point(0, 0);
             this.panelAdd.Name = "panelAdd";
             this.panelAdd.Size = new System.Drawing.Size(700, 529);
             this.panelAdd.TabIndex = 0;
@@ -312,6 +312,7 @@
             this.btnClear.TabIndex = 0;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label15
             // 
@@ -687,7 +688,7 @@
             this.MainMenu_panel.Location = new System.Drawing.Point(0, 0);
             this.MainMenu_panel.Margin = new System.Windows.Forms.Padding(2);
             this.MainMenu_panel.Name = "MainMenu_panel";
-            this.MainMenu_panel.Size = new System.Drawing.Size(667, 529);
+            this.MainMenu_panel.Size = new System.Drawing.Size(686, 529);
             this.MainMenu_panel.TabIndex = 12;
             // 
             // btnShowInteractPetPanle
@@ -1004,11 +1005,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(697, 592);
             this.Controls.Add(this.MainMenu_panel);
+            this.Controls.Add(this.panelAdd);
             this.Controls.Add(this.panelSearch);
             this.Controls.Add(this.panelEdit);
             this.Controls.Add(this.panelInteract);
             this.Controls.Add(this.panelDelete);
-            this.Controls.Add(this.panelAdd);
             this.Name = "Form1";
             this.Text = ".::.PET CARE.::.";
             this.panelAdd.ResumeLayout(false);

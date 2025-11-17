@@ -22,7 +22,7 @@ namespace programming3_PetCare_System
             manager.AddPet(new Dog("Max", 5, ""));
             manager.AddPet(new Cat("Luna", 1, ""));
         }
-        // ddjojefoirfjowifjowfjowf
+        
         private void btnShowAddPetPanle_Click_1(object sender, EventArgs e)
         {
             panelAdd.Visible = true;
@@ -44,7 +44,7 @@ namespace programming3_PetCare_System
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-
+           
             string name = txtName.Text.Trim();
             int typeIndex = cmbType.SelectedIndex;
             int age = (int)numAge.Value;
@@ -88,7 +88,7 @@ namespace programming3_PetCare_System
 
             ClearFields();
 
-
+            
 
         }
         private void ClearFields()
