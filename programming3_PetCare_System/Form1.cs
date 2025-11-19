@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Cerine aish aljahdali 
+//Jana Abdullah Alharbi
+//Hajer Saleh AlAbbas
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +25,7 @@ namespace programming3_PetCare_System
             manager.AddPet(new Dog("Max", 5, ""));
             manager.AddPet(new Cat("Luna", 1, ""));
         }
-        
+        //Jana code
         private void btnShowAddPetPanle_Click_1(object sender, EventArgs e)
         {
             panelAdd.Visible = true;
@@ -43,8 +46,6 @@ namespace programming3_PetCare_System
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-           
             string name = txtName.Text.Trim();
             int typeIndex = cmbType.SelectedIndex;
             int age = (int)numAge.Value;
@@ -86,10 +87,7 @@ namespace programming3_PetCare_System
 
             MessageBox.Show("Add Pet : " + name + " " + typeText + " " + age + "years " + " Notes :" + notes);
 
-            ClearFields();
-
-            
-
+            ClearFields(); 
         }
         private void ClearFields()
         {
@@ -110,10 +108,6 @@ namespace programming3_PetCare_System
             //backToMenuFromAdd_btn.Visible = false;
             MainMenu_panel.Visible = true;
         }
-
-  
-
-
         //cerine code
         private void btnShowDeletePetPanle_Click(object sender, EventArgs e)
         {
@@ -226,33 +220,14 @@ namespace programming3_PetCare_System
 
                     }
                 }
-
-
             }
-
             else // oldPet == null
             {
                 edit_petNotFoundLbl.Visible = true;
 
             }
-
-
-
         }
-
-
-        // end cerine code
-
-
-
-
-
-
-
-
-
-
-        // هنا اضفت ذا لكود هاجر عشان يبين البانلز
+        //Hajer code    
         private void btnShowSearchPetPanle_Click(object sender, EventArgs e)
         {
             panelSearch.Visible = true;
@@ -262,7 +237,6 @@ namespace programming3_PetCare_System
             panelAdd.Visible = false;
             panelInteract.Visible = false;
         }
-
         private void btnShowInteractPetPanle_Click(object sender, EventArgs e)
         {
             panelInteract.Visible = true;
@@ -272,14 +246,6 @@ namespace programming3_PetCare_System
             panelAdd.Visible = false;
             panelSearch.Visible = false;
         }
-
-
-
-
-
-
-
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             String name = txtPetName.Text;
@@ -295,7 +261,6 @@ namespace programming3_PetCare_System
                 lblResult.ForeColor = Color.Red;
             }
         }
-
         private void btnBackToMain_Click(object sender, EventArgs e)
         {
             MainMenu_panel.Visible = true;
@@ -306,8 +271,6 @@ namespace programming3_PetCare_System
             panelSearch.Visible = false;
             panelInteract.Visible = false;
         }
-
-
         private void btnInteract_Click(object sender, EventArgs e)
         {
             string name=textPetName.Text.Trim();
