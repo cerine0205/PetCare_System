@@ -1,54 +1,68 @@
-Pet Care System
+# Pet Care System
 
-Pet Care System is a WinForms-based desktop application developed as part of the Programming III (COCS307) course.
-The project transforms a console-based pet management system into a full graphical user interface, focusing on usability, organization, and clean design.
+Pet Care System is a WinForms-based desktop application developed as part of the Programming III (COCS307) course.  
+The project transforms a console-based pet management system into a full graphical user interface, with a focus on usability, organization, and clean design.
 
-Project Objective
+---
 
-The goal of this project is to provide a simple and organized system that allows users to manage their pets easily without using console commands.
+## Project Objective
+The goal of this project is to provide a simple and organized system that allows users to manage their pets easily without relying on console commands.
 
-Features
- • Add new pets
- • Edit existing pet information
- • Delete pet records
- • Search pets by name
- • Interact with pets (feed or play)
- • View all stored pets
+---
 
-GUI Design
- • Panel-based layout separating each feature
- • Clear buttons and labeled inputs
- • Consistent color theme for readability
- • Error messages and validation feedback
+## Features
+- Add new pets  
+- Edit existing pet information  
+- Delete pet records  
+- Search pets by name  
+- Interact with pets (feed or play)  
+- View all stored pets  
 
-Technical Overview
- • Built using C# WinForms
- • Object-Oriented Programming (OOP) principles
- • Event-driven architecture
- • Central PetManager class to manage data
- • Input validation and error handling across all features
+---
 
-Team Members
- • Cerine Aljahdali
- • Jana Alharbi
- • Hajer Alabbas
+## GUI Design
+- Panel-based layout separating each feature  
+- Clear buttons and labeled input fields  
+- Consistent color theme for better readability  
+- Error messages and validation feedback  
 
-Limitations
- • Pet data is stored in memory only and resets when the application closes
- • Limited interaction options (feeding and playing only)
- • No user accounts or persistence
+---
 
-Future Enhancements
- • Integrate a database (e.g., SQLite)
- • Add advanced pet interactions (training, grooming, health monitoring)
- • Implement user accounts and login system
+## Technical Overview
+- Built using C# WinForms  
+- Object-Oriented Programming (OOP) principles  
+- Event-driven architecture  
+- Central PetManager class to manage pet data  
+- Input validation and error handling across all features  
 
-Conclusion
+---
 
+## Team Members
+- Cerine Aljahdali  
+- Jana Alharbi  
+- Hajer Alabbas  
+
+---
+
+## Limitations
+- Pet data is stored in memory only and resets when the application closes  
+- Limited interaction options (feeding and playing only)  
+- No user accounts or data persistence  
+
+---
+
+## Future Enhancements
+- Integrate a database (e.g., SQLite)  
+- Add advanced pet interactions (training, grooming, health monitoring)  
+- Implement user accounts and login system  
+
+---
+
+## Conclusion
 This project demonstrates practical experience in:
- • GUI development
- • Software design
- • Debugging
- • Team collaboration using GitHub
+- GUI development  
+- Software design  
+- Debugging  
+- Team collaboration using GitHub  
 
-A complete and well-structured WinForms application that fulfills all course requirements.
+The result is a complete and well-structured WinForms application that fulfills all course requirements.
